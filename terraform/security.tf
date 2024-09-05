@@ -1,3 +1,5 @@
+# security.tf
+
 resource "aws_security_group" "medusa_sg" {
   vpc_id = aws_vpc.medusa_vpc.id
 

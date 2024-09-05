@@ -11,7 +11,8 @@ terraform {
   }
 }
 
-# Enable state management for shared workspaces (optional)
+# Optional: S3 Backend for storing Terraform state
+# (skip if you're managing the state locally)
 backend "s3" {
   bucket         = "your-terraform-state-bucket"
   key            = "terraform/medusa-ecs/terraform.tfstate"

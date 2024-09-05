@@ -1,3 +1,5 @@
+# network.tf
+
 resource "aws_vpc" "medusa_vpc" {
   cidr_block = var.vpc_cidr
 }

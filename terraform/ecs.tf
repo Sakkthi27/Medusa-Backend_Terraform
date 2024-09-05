@@ -1,3 +1,5 @@
+# ecs.tf
+
 resource "aws_ecs_cluster" "medusa_cluster" {
   name = "medusa-cluster"
 }
@@ -35,4 +37,12 @@ resource "aws_ecs_service" "medusa_service" {
     subnets         = aws_subnet.medusa_subnet[*].id
     security_groups = [aws_security_group.medusa_sg.id]
   }
+}
+
+output "ecs_cluster_name" {
+  value = aws_ecs_cluster.medusa_cluster.name
+}
+
+output "ecs_service_name" {
+  value = aws_ecs_service.medusa_service.name
 }

@@ -19,7 +19,7 @@ module "security" {
   source = "./security.tf"
 }
 
-# Outputs
+# Outputs for ECS Cluster and Service
 output "ecs_cluster_name" {
   value = module.ecs.ecs_cluster_name
 }
